@@ -32,6 +32,7 @@ public class FileController {
 	  @PostMapping("/upload")
 	  public ResponseEntity<?> uploadFile(@RequestParam("file") MultipartFile file) {
 	    String message = "";
+	    System.out.println("this is controller");
 	    if (CSVHelper.hasCSVFormat(file)) {
 	      try {
 	        fileService.save(file);
