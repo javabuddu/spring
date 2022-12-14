@@ -43,7 +43,6 @@ public class FileController {
 	        return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(message);
 	      }
 	    }
-System.out.println("this is seconnd sout");
 	    message = "Please upload a csv file!";
 	    return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(message);
 	  }
