@@ -32,7 +32,6 @@ public class FileController {
 	  @PostMapping("/upload")
 	  public ResponseEntity<?> uploadFile(@RequestParam("file") MultipartFile file) {
 	    String message = "";
-	    System.out.println("this is controller");
 	    if (CSVHelper.hasCSVFormat(file)) {
 	      try {
 	        fileService.save(file);
@@ -44,7 +43,7 @@ public class FileController {
 	        return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(message);
 	      }
 	    }
-
+System.out.println("this is seconnd sout");
 	    message = "Please upload a csv file!";
 	    return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(message);
 	  }
